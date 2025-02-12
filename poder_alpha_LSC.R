@@ -9,6 +9,7 @@ calcula_poder <-function(k,sigma,n){
 
 calcula_poder(3,1,4)
 
+# CARTA DE R (ACHO) ---------------------------------------------------
 
 calcula_LSC <- function(n) return(IQCC::d2(n)+IQCC::d3(n)*3)
 calcula_LSC(2)
