@@ -1,9 +1,9 @@
 
+delta<-(7.5-X_barbar)/S_d
 
-calcula_poder <-function(k,sigma,n){
+calcula_poder <-function(k,delta,n){
   
-  return(pnorm(-k-sigma*sqrt(n))+pnorm(-k+sigma*sqrt(n)))
-  
+  return(pnorm(-k+delta*sqrt(n))+pnorm(-k-delta*sqrt(n)))
   
 }
 
