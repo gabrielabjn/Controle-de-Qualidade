@@ -9,6 +9,18 @@ calcula_poder <-function(k,sigma,n){
 
 calcula_poder(3,1,4)
 
+
+# TEMPO MEDIO ATE ALARME -------------------------------------------------------
+
+
+TMA<-function(h,Pd){
+  
+  h*(1/Pd-1/2)
+}
+
+TMA(0.5,0.386)
+  
+
 # CARTA DE R (ACHO) ---------------------------------------------------
 
 calcula_LSC <- function(n) return(IQCC::d2(n)+IQCC::d3(n)*3)
