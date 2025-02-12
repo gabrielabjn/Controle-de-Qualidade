@@ -33,4 +33,4 @@ Pd(Pdx(0.5,4,2,3.24), Pdr(4,2))
 #amostra apos o desajuste
 Pd<-0.3589
 dgeom(x=5-1,prob = 1-Pd) # para delta = 0.5 e lambda=2
-# professor vai conferir a formula acima na prox aula
+# x: quantidade de INsucessos antes do primeiro sucesso
