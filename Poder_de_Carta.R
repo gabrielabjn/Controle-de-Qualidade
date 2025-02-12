@@ -1,13 +1,19 @@
 
 # Poder da carta de X_barra ----------------------------------------------------
 
+sigma1 <- 3.61  # desvio padrao do processo fora de controle
+lambda<- sigma1/S_d  # sigma1/sigma0
+
+mu1 <- 6 # media do processo fora de controle 
+delta<- (mu1-X_barbar)/S_d  # (mu1 - mu0)/sigma0
+
 Pdx<-function(delta,n,lambda,k){
   return(sum(pnorm(-(c(-1,1)*delta*sqrt(n)+k)/lambda)))
 }
 
-Pdx(0.5,4,2,3.24) # probabilidade de ocorrer um alerta
-# poder do grafico de X_barra
+Pdx_(k,delta,lambda,n) # probabilidade de ocorrer um alerta verdadeiro
 
+# ( o processo esta, de fato, fora de controle)
 
 # Poder da carta de R ----------------------------------------------------------
 
