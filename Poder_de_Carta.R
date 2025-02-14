@@ -23,7 +23,7 @@ Pdr<-function(n,lambda){
 Pdr(4,2)
 
 
-# Poder total ------------------------------------------------------------------
+# Poder total (X-barra + R) -----------------------------------------------------
 Pd<-function(Pdx,Pdr){
  return(Pdx + Pdr - Pdx*Pdr)
 }
@@ -40,3 +40,13 @@ Pd(Pdx(0.5,4,2,3.24), Pdr(4,2))
 Pd<-0.3589
 dgeom(x=5-1,prob = 1-Pd) # para delta = 0.5 e lambda=2
 # x: quantidade de INsucessos antes do primeiro sucesso
+
+
+# Poder da carta de S ----------------------------------------------------------
+
+Pd.S<-function(n, lambda=2)
+{
+return(1-pchisq(q=(n-1)*((c4(n) + sqrt(1-(c4(n)ˆ2)) )ˆ2)/lambdaˆ2,df=n-1))
+}
+
+
